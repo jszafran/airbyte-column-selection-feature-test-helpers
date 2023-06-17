@@ -13,7 +13,7 @@ CREATE TABLE source.table_a (
 -- create replication slot & publication
 SELECT pg_create_logical_replication_slot('airbyte_slot', 'pgoutput');
 
-CREATE PUBLICATION airbyte_publication_full FOR TABLE source.table_a;
+CREATE PUBLICATION airbyte_publication FOR TABLE source.table_a;
 
 -- add initial records
 INSERT INTO source.table_a (column_1, column_2, column_3)
